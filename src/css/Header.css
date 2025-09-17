@@ -1,0 +1,27 @@
+.hero-banner {
+  position: relative;
+  min-height: 220px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0.55;
+}
+
+.hero-content {
+  position: relative;
+  padding: 3rem 0;
+  max-width: 900px;
+}
+
+.hero-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  margin: 0.75rem 0 0;
+  max-width: 540px;
+}
