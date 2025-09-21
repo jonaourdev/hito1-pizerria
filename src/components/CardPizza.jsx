@@ -1,39 +1,47 @@
-import {Container, Card, Row, ListGroup} from "react-bootstrap";
+import {Card, Button, ListGroup} from "react-bootstrap";
 
-function CardPizza() {
+export default function CardPizza({name, price, ingredients, img}) {
+  const CLP = (n) =>
+    n.toLocaleString("es-CL", {
+      style: "currency",
+      currency: "CLP",
+      maximumFractionDigits: 0,
+    });
   return (
-    <>
-      <section className="py-4">
-        <Container>
-          <div className="rounded-pill bg-warning-subtle border border-warning-subtle px-3 py-2 mb-4 d-inline-flex align-items-center">
-            <span className="fw-semibold me-2">🍕 Nuestras Pizzas</span>
-          </div>
+    <Card className="h-100 shadow-sm text-center">
+      <Card.Img
+        variant="top"
+        src={img}
+        alt={name}
+        style={{objectFit: "cover", height: "220px"}}
+      />
 
-          <Row className="g-4">
-            <Card style={{width: "18rem"}}>
-              <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-              <ListGroup className="list-group-flush">
-                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-              </ListGroup>
-              <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-              </Card.Body>
-            </Card>
-          </Row>
-        </Container>
-      </section>
-    </>
+      <Card.Body className="d-flex flex-column">
+        <Card.Title className="fw-semibold">{name}</Card.Title>
+
+        <div className="small text-muted mb-2">
+          <strong>Ingredientes:</strong>
+          <ListGroup variant="flush" className="mt-1">
+            {ingredients.map((ing, i) => (
+              <ListGroup.Item key={i} className="py-1">
+                {ing}
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </div>
+
+        <div className="mt-auto">
+          <div className="fw-bold fs-5 mb-3">Precio: {CLP(price)}</div>
+          <div className="d-flex justify-content-between">
+            <Button variant="outline-secondary" size="sm">
+              Ver Más
+            </Button>
+            <Button variant="dark" size="sm">
+              Añadir 🛒
+            </Button>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
   );
 }
-
-export default CardPizza;
