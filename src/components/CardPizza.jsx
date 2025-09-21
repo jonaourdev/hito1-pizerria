@@ -7,8 +7,9 @@ export default function CardPizza({name, price, ingredients, img}) {
       currency: "CLP",
       maximumFractionDigits: 0,
     });
+
   return (
-    <Card className="h-100 shadow-sm text-center">
+    <Card className="h-100 shadow-sm">
       <Card.Img
         variant="top"
         src={img}
@@ -32,7 +33,7 @@ export default function CardPizza({name, price, ingredients, img}) {
 
         <div className="mt-auto">
           <div className="fw-bold fs-5 mb-3">Precio: {CLP(price)}</div>
-          <div className="d-flex justify-content-between">
+          <div className="d-flex gap-2">
             <Button variant="outline-secondary" size="sm">
               Ver Más
             </Button>
