@@ -7,9 +7,11 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <AppNavbar></AppNavbar>
-      <Home></Home>
-      <Footer></Footer>
+      <div className="d-flex flex-column min-vh-100">
+        <AppNavbar></AppNavbar>
+        <Home></Home>
+        <Footer></Footer>
+      </div>
     </>
   );
 }

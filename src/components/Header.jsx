@@ -1,7 +1,7 @@
 import imageBanner from "../img/Header.jpg";
 import {Container} from "react-bootstrap";
 
-export function Header() {
+export default function Header() {
   return (
     <>
       <section

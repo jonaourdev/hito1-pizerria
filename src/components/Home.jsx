@@ -1,8 +1,8 @@
-import {Header} from "./Header";
+import Header from "./Header";
 import {Container, Row, Col} from "react-bootstrap";
 import CardPizza from "../components/CardPizza";
 
-export function Home() {
+export default function Home() {
   return (
     <>
       <div>

@@ -20,7 +20,7 @@ export default function CardPizza({name, price, ingredients, img}) {
       <Card.Body className="d-flex flex-column">
         <Card.Title className="fw-semibold">{name}</Card.Title>
 
-        <div className="small text-muted mb-2">
+        <div className="small text-muted mb-2 text-center">
           <strong>Ingredientes:</strong>
           <ListGroup variant="flush" className="mt-1">
             {ingredients.map((ing, i) => (
@@ -33,7 +33,7 @@ export default function CardPizza({name, price, ingredients, img}) {
 
         <div className="mt-auto">
           <div className="fw-bold fs-5 mb-3">Precio: {CLP(price)}</div>
-          <div className="d-flex gap-2">
+          <div className="d-flex justify-content-between">
             <Button variant="outline-secondary" size="sm">
               Ver Más
             </Button>
