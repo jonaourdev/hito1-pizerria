@@ -18,7 +18,7 @@ export default function CardPizza({name, price, ingredients, img}) {
       />
 
       <Card.Body className="d-flex flex-column">
-        <Card.Title className="fw-semibold">{name}</Card.Title>
+        <Card.Title className="fw-semibold ">{name}</Card.Title>
 
         <div className="small text-muted mb-2 text-center">
           <strong>Ingredientes:</strong>
