@@ -12,10 +12,10 @@ function App() {
     <>
       <div className="d-flex flex-column min-vh-100">
         <AppNavbar></AppNavbar>
-        {/* <Home></Home> */}
+        <Home></Home>
         {/* <LoginPage></LoginPage> */}
         {/* <RegisterPage></RegisterPage> */}
-        <Cart></Cart>
+        {/* <Cart></Cart> */}
         <Footer></Footer>
       </div>
     </>
