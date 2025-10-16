@@ -28,7 +28,7 @@ export default function Pizza() {
     <>
       <Container className="py-4">
         <Row className="g-4">
-          <Col xs={12} md={6} lg={4}>
+          <Col>
             <PizzaDetail
               name={pizza.name}
               desc={pizza.desc}
