@@ -3,7 +3,7 @@ import "../css/PizzaDetail.css";
 
 //MODIFICAR EL CARD
 
-export default function PizzaDetail({name, ingredients, img, price, desc}) {
+export default function PizzaDetail({id, name, ingredients, img, price, desc}) {
   const CLP = (n) =>
     n.toLocaleString("es-CL", {
       style: "currency",

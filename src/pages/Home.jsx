@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "../components/Header";
 import {Container, Row, Col} from "react-bootstrap";
 import CardPizza from "../components/CardPizza";
 import {useEffect, useState} from "react";
@@ -26,6 +26,7 @@ export default function Home() {
             {pizzas.map((pizza) => (
               <Col xs={12} md={6} lg={4}>
                 <CardPizza
+                  id={pizza.id}
                   name={pizza.name}
                   price={pizza.price}
                   ingredients={pizza.ingredients}

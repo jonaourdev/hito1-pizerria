@@ -1,6 +1,9 @@
 import {Card, Button, ListGroup} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 
-export default function CardPizza({name, price, ingredients, img}) {
+export default function CardPizza({id, name, price, ingredients, img}) {
+  const navigate = useNavigate();
+
   const CLP = (n) =>
     n.toLocaleString("es-CL", {
       style: "currency",
@@ -34,7 +37,11 @@ export default function CardPizza({name, price, ingredients, img}) {
         <div className="mt-auto">
           <div className="fw-bold fs-5 mb-3">Precio: {CLP(price)}</div>
           <div className="d-flex justify-content-between">
-            <Button variant="outline-secondary" size="sm">
+            <Button
+              variant="outline-secondary"
+              size="sm"
+              onClick={() => navigate(`/pizza/${id}`)}
+            >
               Ver Más
             </Button>
             <Button variant="dark" size="sm">
